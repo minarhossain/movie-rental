@@ -7,7 +7,7 @@ import watchLater from "./assets/icons/watchLater.svg";
 
 const SideBar = () => {
   return (
-    <aside>
+    <aside className="w-1/6">
       <ul className="space-y-2">
         <li>
           <a
