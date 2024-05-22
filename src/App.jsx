@@ -2,18 +2,19 @@ import "./App.css";
 import Header from "./Header";
 import Footer from "./Footer";
 import SideBar from "./SideBar";
-import MovieList from "./MovieList";
+import MovieList from "./cine/MovieList";
 MovieList;
 
 function App() {
   return (
     <div>
       <Header />
-      <div className="flex justify-around">
-        <SideBar />
-        <MovieList />
-      </div>
-
+      <main>
+        <div className="flex justify-around">
+          <SideBar />
+          <MovieList />
+        </div>
+      </main>
       <Footer />
     </div>
   );
