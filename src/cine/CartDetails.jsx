@@ -1,5 +1,3 @@
-import React from "react";
-
 const CartDetails = ({ onClose }) => {
   return (
     <div className="fixed top-0 left-0 w-screen h-screen z-50 bg-black/60 backdrop-blur-sm">
@@ -24,6 +22,7 @@ const CartDetails = ({ onClose }) => {
                   <span className="max-md:text-xs">$100</span>
                 </div>
               </div>
+
               <div className="flex justify-between gap-4 items-center">
                 <button className="bg-[#D42967] rounded-md p-2 md:px-4 inline-flex items-center space-x-2 text-white">
                   <img className="w-5 h-5" src="./assets/delete.svg" alt="" />
@@ -31,6 +30,7 @@ const CartDetails = ({ onClose }) => {
                 </button>
               </div>
             </div>
+
             <div className="grid grid-cols-[1fr_auto] gap-4">
               <div className="flex items-center gap-4">
                 <img
@@ -54,6 +54,7 @@ const CartDetails = ({ onClose }) => {
               </div>
             </div>
           </div>
+
           <div className="flex items-center justify-end gap-2">
             <a
               className="rounded-md p-2 md:px-4 inline-flex items-center space-x-2 bg-primary text-[#171923] text-sm"

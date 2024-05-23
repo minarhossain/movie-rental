@@ -7,9 +7,10 @@ import { MovieContext } from "./context";
 import { useState } from "react";
 
 function App() {
-  const [movieData, setMovieData] = useState([]);
+  const [cardData, setCardData] = useState([]);
+
   return (
-    <MovieContext.Provider value={{ movieData, setMovieData }}>
+    <MovieContext.Provider value={{ cardData, setCardData }}>
       <Header />
       <main>
         <div className="flex justify-around">
