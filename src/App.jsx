@@ -3,11 +3,13 @@ import Header from "./Header";
 import Footer from "./Footer";
 import SideBar from "./SideBar";
 import MovieList from "./cine/MovieList";
-MovieList;
+import { MovieContext } from "./context";
+import { useState } from "react";
 
 function App() {
+  const [movieData, setMovieData] = useState([]);
   return (
-    <div>
+    <MovieContext.Provider value={{ movieData, setMovieData }}>
       <Header />
       <main>
         <div className="flex justify-around">
@@ -16,7 +18,7 @@ function App() {
         </div>
       </main>
       <Footer />
-    </div>
+    </MovieContext.Provider>
   );
 }
 
