@@ -1,25 +1,19 @@
 import "./App.css";
-import Header from "./Header";
-import Footer from "./Footer";
-import SideBar from "./SideBar";
-import MovieList from "./cine/MovieList";
-import { MovieContext } from "./context";
+
+import { MovieContext, ThemeContext } from "./context";
 import { useState } from "react";
+import Page from "./Page";
 
 function App() {
   const [cardData, setCardData] = useState([]);
+  const [darkMode, setDarkMode] = useState(true);
 
   return (
-    <MovieContext.Provider value={{ cardData, setCardData }}>
-      <Header />
-      <main>
-        <div className="flex justify-around">
-          <SideBar />
-          <MovieList />
-        </div>
-      </main>
-      <Footer />
-    </MovieContext.Provider>
+    <ThemeContext.Provider value={{ darkMode, setDarkMode }}>
+      <MovieContext.Provider value={{ cardData, setCardData }}>
+        <Page />
+      </MovieContext.Provider>
+    </ThemeContext.Provider>
   );
 }
 
